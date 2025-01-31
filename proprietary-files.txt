@@ -97,7 +97,7 @@ vendor/lib64/libuniplugin.so
 # NFC
 vendor/bin/hw/nxp.android.hardware.nfc@1.1-service
 vendor/etc/init/nxp.android.hardware.nfc@1.1-service.rc
-vendor/lib64/nfc_nci_nxp.so
-vendor/lib64/vendor.nxp.nxpnfc@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@1.1.so
+vendor/lib64/nfc_nci_nxp.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.nxp.nxpnfc@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.nxp.nxpnfc@1.1.so;MODULE_SUFFIX=_vendor
 vendor/firmware/nfc/libpn553_fw.so
