@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
     UdfpsHandler_a51
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    $(DEVICE_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Audio configs
 PRODUCT_COPY_FILES += \
