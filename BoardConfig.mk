@@ -47,9 +47,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 ## Filesystem config
 include device/samsung/universal9611-common/fsconfig_dynamic.mk
 
-# FOD
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.a51
+# UDFPS
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
+$(call soong_config_set,surfaceflinger,udfps_lib,//$(DEVICE_PATH):libudfps_extension.a51)
 
 ## SELinux
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
