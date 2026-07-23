@@ -39,8 +39,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 $(call soong_config_set,samsungCameraVars,extra_ids,4,20,23,50,52,54)
 
 ## Vintf
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
 
 ## Filesystem config
 include device/samsung/universal9611-common/fsconfig_dynamic.mk
@@ -55,3 +54,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 ## Prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+#VINTF SKIP
+
+PRODUCT_OTA_ENFORCE_VINTF_MANIFEST := false
+BUILD_BROKEN_VINTF_PRODUCT_METADATA := true
+

@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a51.mk
+    $(LOCAL_DIR)/cherish_a51.mk

@@ -23,7 +23,7 @@ TARGET_USES_NXP_NFC := true
 $(call inherit-product, device/samsung/a51/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 29
@@ -37,10 +37,31 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	BuildFingerprint="samsung/a51nsxx/a51:13/TP1A.220624.014/A515FXXU5GVK6:user/release-keys"
 
 ## Device configuration
-PRODUCT_NAME := lineage_a51
+PRODUCT_NAME := cherish_a51
 PRODUCT_DEVICE := a51
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A515F
 PRODUCT_MANUFACTURER := samsung
 
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Maintainer
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=CokSnUlgen
+
+# Google Apps Settings for GMS (Pico)
+#WITH_GMS := true
+#TARGET_USES_PICO_GAPPS := true
+
+# Web Browser & Extra Packages
+PRODUCT_PACKAGES += \
+    Browser2 \
+    Aperture \
+    DeskClock \
+    Gallery2 \
+    messaging \
+    Dialer
+
+# Setup Wizard Mode
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.mode=OPTIONALo.setupwizard.mode=OPTIONAL
